@@ -11,3 +11,14 @@ a {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+#logo {
+  float: right; 
+  width: 110px;
+
+}
+@media (max-width: 767.98px) {
+  #logo {
+    float: none
+  }
+}

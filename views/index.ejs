@@ -21,18 +21,41 @@
   <body>
     <div class="container">
       <div id="app">
-        <a href="https://xooa.com"
-          ><img alt="Xooa logo" src="./images/logo.png" /> </a
-        ><br />
-        <p>Easy. Blockchain. Period.</p>
+        <!-- <a href="https://xooa.com"> -->
+          <img alt="Colorado logo" id="logo" src="./images/colorado.png"/>
+        <!-- </a> -->
+        <!-- <br />
+        <p>Easy. Blockchain. Period.</p> -->
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <br />
         <h4>
-          Cast your vote on Xooa blockchain
+          DEMO NONPARTISAN BALLOT FOR DENVER COUNTY, COLORADO
         </h4>
-
+        <br />
+        <br />
+        <h5>
+          General Election:
+          <br />
+          LEAD BLOCKCHAIN COMMISSIONER
+          <br />
+          FOR THE STATE OF COLORADO
+          <br />
+          <br />
+        </h5>
+        <h5 style="text-align: left;">INSTRUCTIONS TO VOTERS:</h5>
+        <p style="text-align: left;">To vote, select the checkbox that corresponds to the candidate of your choice. You are allowed to select no more than
+        one candidate per ballot. Once you have chosen your desired candidate, select the “Vote” button to submit your vote and
+        you should receive the message, “Thanks for voting! Your vote has been registered.” Once you have selected the “Submit”
+        button, you will not be able change your vote. If you attempt to, you will receive the message, “You have already
+        voted!”</p>
         <br />
         <iframe
-          src="https://widget.xooa.com/embed?apiToken=<%= token %>"
+          src="https://widget.xooa.com/embed_new?ballotId=<%= ballotId %>&apiToken=<%= token %>"
           frameborder="0"
           scrolling="no"
           class="d-flex align-items-stretch"
