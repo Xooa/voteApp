@@ -6,11 +6,11 @@ var log4js = require("log4js");
 var logger = log4js.getLogger();
 logger.level = "debug";
 const baseURL = "https://voting.xooa.com?token=";
-
+var ballotId = "&ballotId=";
 
 const createQr = async (voter) => {
   if(voter.body && voter.body.ApiToken) {
-    let url = baseURL + voter.body.ApiToken;
+    let url = baseURL + voter.body.ApiToken + ballotId;
     let err, qr = await QRCode.toDataURL(url);
     let row = { url: url, qr: qr };
     return row;
@@ -117,6 +117,9 @@ const enrollVoter = async (token, i) => {
 /* GET users listing. */
 router.get('/', async (req, res, next) => {
   if(req.query.token && req.query.users) {
+    if(req.query.ballotId) {
+      ballotId = "&ballotId=" + req.query.ballotId;
+    }
     var listOfArguments = [];
     for(let i=0; i<req.query.users; i++) {
       listOfArguments.push(req.query.token);
